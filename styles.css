@@ -10,7 +10,7 @@ html {
 
 body {
     display: grid;
-    grid-template-rows: 80px 1fr 2fr 1fr;
+    grid-template-rows: 80px 3fr 2fr 1fr;
     padding: 0;
     height: 100%;
     width: 100%;
@@ -81,5 +81,67 @@ body {
     border-bottom: 2px solid black;
 }
 
+.carousel{
+    max-height: 100%;
+    max-width: 100%;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+.carousel-container{
+    background-color: aquamarine;
+    grid-area: 2/2/3/3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-wrapper{
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.carousel-card {
+    background-color: blueviolet;
+    min-height: 90%;
+    width: 250px;
+    margin: 10px;
+    display: inline-block;
+    color: white;
+    transition: transform 500ms ease-in-out 25ms;
+}
+
+.carousel-btn{
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-btn button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+}
+
+.carousel-btn[data-direction="left"]{
+   justify-content: flex-end;
+   position: relative;
+   right: -20px;
+   z-index: 100;
+}
+
+.carousel-btn[data-direction="right"]{
+    justify-content: flex-start;
+    position: relative;
+    left: -20px;
+    z-index: 100;
+}
 
 
