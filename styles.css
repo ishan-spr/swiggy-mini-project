@@ -85,7 +85,7 @@ body {
     max-height: 100%;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 6fr 1fr;
 }
 
@@ -101,10 +101,10 @@ body {
     width: 100%;
     white-space: nowrap;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .carousel-card {
-    background-color: blueviolet;
     min-height: 90%;
     width: 250px;
     margin: 10px;
@@ -112,10 +112,17 @@ body {
     color: white;
     transition: transform 10ms ease-in-out 25ms;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .carousel-card:hover{
     transform: scale(1.1)
+}
+
+.carousel-card img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-btn{

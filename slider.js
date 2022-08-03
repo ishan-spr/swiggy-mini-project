@@ -1,5 +1,15 @@
 (
     function () {
+        let sliderData = [
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/s5ug2key6e2sptaxku5v',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/awurei8ypqkafoqay9ym',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/s5ug2key6e2sptaxku5v',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep',
+            'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/awurei8ypqkafoqay9ym',
+        ]
         let currOffset = 0 
 
         function getOffSets(el) {
@@ -10,6 +20,15 @@
         let leftBtn = document.querySelector('.carousel-btn[data-direction="left"]')
         let rightBtn = document.querySelector('.carousel-btn[data-direction="right"]')
         let carouselWrapper = document.querySelector('.carousel-wrapper')
+
+        sliderData.forEach(slider=>{
+            let slide = document.createElement('div')
+            slide.classList.add('carousel-card')
+            let img = document.createElement('img')
+            img.setAttribute('src',slider)
+            slide.appendChild(img)
+            carouselWrapper.appendChild(slide)
+        })
 
         leftBtn.addEventListener('click', () => {  
             let carouselItems = document.querySelectorAll('.carousel-card')
