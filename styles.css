@@ -1,0 +1,157 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: fantasy;
+}
+
+/* Page Setup */
+
+body {
+    display: grid;
+    grid-template-rows: 80px 3fr 2fr 1fr;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.5px solid grey;
+}
+
+.header > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .left {
+    flex-basis: 20%;
+}
+
+.header .right {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* left nav bar */
+
+.left  > * {
+    display: inline-block;
+    height: min-content;
+    margin: 10px;
+}
+
+.left .text{
+    font-size: 1.5rem;
+}
+
+/* Right Nav bar */
+.right  > * {
+    display: inline-block;
+    height: min-content;
+}
+
+.right {
+    font-size: 1rem;
+}
+
+.nav-link{
+    box-sizing: border-box;
+    display: flex;
+    padding: 5px;
+    cursor:pointer;
+    border-bottom: 2px solid transparent ;
+}
+
+.nav-link > span{
+ display: block;
+ margin: 2px;
+}
+
+.nav-link:hover{
+    border-bottom: 2px solid black;
+}
+
+.carousel{
+    max-height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+.carousel-container{
+    grid-area: 2/2/3/3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-wrapper{
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-card {
+    min-height: 90%;
+    width: 250px;
+    margin: 10px;
+    display: inline-block;
+    color: white;
+    transition: transform 10ms ease-in-out 25ms;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.carousel-card:hover{
+    transform: scale(1.1)
+}
+
+.carousel-card img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-btn{
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-btn button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+}
+
+.carousel-btn[data-direction="left"]{
+   justify-content: flex-end;
+   position: relative;
+   right: -20px;
+   z-index: 100;
+}
+
+.carousel-btn[data-direction="right"]{
+    justify-content: flex-start;
+    position: relative;
+    left: -20px;
+    z-index: 100;
+}
+
+
