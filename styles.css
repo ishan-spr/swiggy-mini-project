@@ -84,14 +84,12 @@ body {
 .carousel{
     max-height: 100%;
     max-width: 100%;
-    background-color: aqua;
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 6fr 1fr;
 }
 
 .carousel-container{
-    background-color: aquamarine;
     grid-area: 2/2/3/3;
     overflow: hidden;
     display: flex;
@@ -112,7 +110,12 @@ body {
     margin: 10px;
     display: inline-block;
     color: white;
-    transition: transform 500ms ease-in-out 25ms;
+    transition: transform 10ms ease-in-out 25ms;
+    cursor: pointer;
+}
+
+.carousel-card:hover{
+    transform: scale(1.1)
 }
 
 .carousel-btn{
