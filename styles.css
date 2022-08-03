@@ -24,6 +24,12 @@ body {
     display: flex;
     justify-content: space-around;
     border-bottom: 0.5px solid grey;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    grid-row: 1;
 }
 
 .header > div{
@@ -81,12 +87,15 @@ body {
     border-bottom: 2px solid black;
 }
 
+/* Carousel Section */
+
 .carousel{
     max-height: 100%;
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 6fr 1fr;
+    grid-row: 2;
 }
 
 .carousel-container{
@@ -110,13 +119,13 @@ body {
     margin: 10px;
     display: inline-block;
     color: white;
-    transition: transform 10ms ease-in-out 25ms;
     cursor: pointer;
     border-radius: 20px;
 }
 
 .carousel-card:hover{
-    transform: scale(1.1)
+    transform: scale(1.1);
+    transition: transform 0ms ease-in-out 0ms;
 }
 
 .carousel-card img{
@@ -153,5 +162,71 @@ body {
     left: -20px;
     z-index: 100;
 }
+
+
+/* Items Section */
+
+.items-wrapper{
+    display: grid;
+    grid-template-rows: 80px auto;
+    grid-row: 3;
+    position: static;
+}
+
+.items-nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.5px solid grey;
+    border-top: 0.5px solid grey;;
+    position: sticky;
+    box-shadow: 0px 4px 20px 0px grey;
+    width: 100%;
+    grid-row: 1;
+    z-index: 9999;
+    background-color: white;
+    top: 0;
+}
+
+.items-nav > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-nav .left {
+    flex-basis: 20%;
+}
+
+.items-nav .right {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.items-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    grid-row: 2;
+}
+
+.items-grid{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(18,300px);
+    grid-gap: 10px;
+}
+
+.items-card{
+    background-color: aqua;
+}
+
+.fix_at_top{
+    position: fixed;
+    top: 0;
+}
+
 
 
