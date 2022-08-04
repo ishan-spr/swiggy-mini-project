@@ -53,7 +53,10 @@
             time.innerText = '25 Mins'
             time.classList.add('time')
             deliveryDetail.appendChild(time)
-            deliveryDetail.appendChild(dotBefore)
+
+            let dotAfter = document.createElement('span')
+            dotAfter.innerText='.'
+            deliveryDetail.appendChild(dotAfter)
     
             let cost = document.createElement('span')
             cost.classList.add('cost')
