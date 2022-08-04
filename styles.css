@@ -51,6 +51,8 @@ body {
     justify-content: space-evenly;
 }
 
+
+
 /* left nav bar */
 
 .left>* {
@@ -80,6 +82,10 @@ body {
     cursor: pointer;
     border-bottom: 2px solid transparent;
     position: static;
+}
+
+.hamburger{
+    display: none;
 }
 
 .nav-link>span {
