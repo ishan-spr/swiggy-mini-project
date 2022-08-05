@@ -1,0 +1,23 @@
+@media (max-width:480px) {
+    body{
+        overflow-x: hidden;
+    }
+    .items-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(9, 400px);
+        grid-gap: 10px;
+    }
+    .nav-link{
+        display: none;
+    }
+    .header , .items-nav{
+        justify-content: space-between;
+    }
+    .hamburger{
+        display: block;
+    }
+    .footer p{
+        width:100%
+    }
+}
